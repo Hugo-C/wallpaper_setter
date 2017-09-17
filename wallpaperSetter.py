@@ -53,7 +53,6 @@ def find_top_image_url(subreddit_name):
 
     res = {'url': DEFAULT_WALLPAPER}
     client_id, client_secret, username, password = load_login()
-    print(load_login())
     reddit = praw.Reddit(client_id=client_id,
                          client_secret=client_secret,
                          user_agent='by /u/Hugo-C',
