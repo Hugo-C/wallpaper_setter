@@ -98,7 +98,9 @@ def tweet_image(data):
 def main():
     logging.basicConfig(filename="log.txt", level=logging.DEBUG)
     logging.debug("---------------------------START----------------------------------")
-    logging.debug("time = " + repr(time.gmtime(time.time())))
+    log_time = time.gmtime(time.time())
+    logging.debug("time : " + str(log_time.tm_min) + ":" + str(log_time.tm_hour) + ", " +
+            str(log_time.tm_mday) + "/" + str(log_time.tm_mon) + "/" + str(log_time.tm_year))
     try:
         my_image = find_top_image_url(SUBREDDIT)
         local = download_image(my_image['url'])
